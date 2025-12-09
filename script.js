@@ -58,3 +58,65 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 });
+
+// Get the modal
+const modal = document.getElementById("quoteModal");
+// Get the <span> element that closes the modal
+const closeBtn = document.querySelector(".close-btn");
+// Get the form
+const quoteForm = document.getElementById("quoteForm");
+
+// Function to open the modal
+function openQuoteModal(serviceName) {
+    // Set the service name in the modal title and hidden input
+    document.getElementById("modalServiceName").textContent = serviceName;
+    document.getElementById("serviceType").value = serviceName;
+    modal.style.display = "block";
+}
+
+// Function to close the modal
+function closeQuoteModal() {
+    modal.style.display = "none";
+}
+
+// Close the modal when the user clicks on the close button (x)
+closeBtn.onclick = function() {
+    closeQuoteModal();
+}
+
+// Close the modal when the user clicks anywhere outside of the modal
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeQuoteModal();
+    }
+}
+
+// Handle form submission to create WhatsApp link
+quoteForm.onsubmit = function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    const serviceType = document.getElementById("serviceType").value;
+    const userName = document.getElementById("userName").value;
+    const userLocation = document.getElementById("userLocation").value;
+    const userPhone = document.getElementById("userPhone").value;
+    const serviceDetails = document.getElementById("serviceDetails").value;
+
+    // Build the predefined message
+    const message = `*QUOTE REQUEST (Website)*%0A%0A` +
+                    `*Service:* ${serviceType}%0A` +
+                    `*Name:* ${userName}%0A` +
+                    `*Location:* ${userLocation}%0A` +
+                    `*Contact:* ${userPhone}%0A` +
+                    `*Details:* ${serviceDetails}%0A%0A` +
+                    `Please provide me with a quote and availability. Thank you!`;
+
+    // Target WhatsApp Number (Using Goitse's number for consistency)
+    const targetNumber = '27810462730'; 
+    
+    // Construct the WhatsApp API link
+    const whatsappLink = `https://wa.me/${targetNumber}?text=${message}`;
+
+    // Close modal and open WhatsApp
+    closeQuoteModal();
+    window.open(whatsappLink, '_blank');
+};

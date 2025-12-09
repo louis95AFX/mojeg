@@ -549,3 +549,170 @@ footer {
     background: rgba(0, 0, 0, 0.4); /* Dark transparency */
     z-index: 5; /* Between the video (z-index: 1) and the content (z-index: 10) */
 }
+
+/* --- Modal Styling --- */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; 
+    z-index: 1000; /* Ensure it is above all other content */
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.8); /* Darker, more professional overlay */
+    backdrop-filter: blur(4px); /* Optional: Adds a nice blur effect */
+}
+
+.modal-content {
+    background-color: #ffffff; /* Clean white background */
+    margin: 5vh auto; /* 5% from the top and centered */
+    padding: 30px;
+    border: none;
+    width: 90%; 
+    max-width: 550px; /* Slightly wider modal */
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25); /* Stronger shadow for depth */
+    font-family: 'Poppins', sans-serif; /* Use your primary font */
+    animation: slideInTop 0.4s ease-out; /* Use a nicer animation */
+}
+
+/* Modal Header/Title Styling */
+.modal-content h2 {
+    color: #333; /* Dark text */
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #f2c700; /* Use a gold/accent line */
+}
+
+#modalServiceName {
+    color: #f2c700; /* Highlight the service name with the accent color */
+    font-weight: 700;
+}
+
+.close-btn {
+    color: #999;
+    float: right;
+    font-size: 32px;
+    font-weight: 300; /* Lighter weight 'x' */
+    cursor: pointer;
+    line-height: 1; /* Aligns 'x' better */
+    transition: color 0.2s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #e74c3c; /* Red on hover for closing action */
+    text-decoration: none;
+}
+
+/* Form Input Styling */
+#quoteForm label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #555;
+    font-size: 0.95em;
+}
+
+#quoteForm input[type="text"],
+#quoteForm input[type="tel"],
+#quoteForm textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px; /* Slightly rounded corners */
+    box-sizing: border-box; 
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+#quoteForm input:focus,
+#quoteForm textarea:focus {
+    border-color: #f2c700; /* Gold/Accent border on focus */
+    outline: none;
+    box-shadow: 0 0 5px rgba(242, 199, 0, 0.3);
+}
+
+#quoteForm textarea {
+    resize: vertical;
+}
+
+/* Button Styling (Assuming primary-btn is defined elsewhere, but ensuring it looks good here) */
+.full-width.primary-btn {
+    padding: 15px 20px;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    /* If your primary-btn is gold: */
+    background-color: #f2c700; 
+    color: #333; /* Dark text on gold button */
+}
+
+.full-width.primary-btn:hover {
+    background-color: #e0b400; /* Darker gold on hover */
+    transform: translateY(-1px);
+}
+
+.modal-note {
+    text-align: center;
+    font-size: 0.9em;
+    color: #999;
+    margin-top: 15px;
+}
+
+/* Animation for entry */
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Update the footer-grid to accommodate the 3rd column */
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Now three columns */
+    gap: 20px;
+    padding-bottom: 30px;
+}
+
+/* Styling for the social icons wrapper */
+.social-icons {
+    margin-left:150px ;
+    margin-top: 10px;
+    display: flex;
+    gap: 15px; /* Spacing between icons */
+}
+
+/* Styling for individual icons/links */
+.social-icons a {
+    color: #fff; /* Assuming your footer text is white/light */
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #f2c700; /* Use your accent color on hover */
+}
+
+/* Media query for smaller screens to stack the columns */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr; /* Stack columns on small screens */
+        text-align: center;
+    }
+    .social-icons {
+        justify-content: center; /* Center icons when stacked */
+    }
+}
