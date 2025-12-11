@@ -49,58 +49,58 @@
                     </a>
                 </div>
             </div>
-            </section>
+        </section>
 
-            <section id="services" class="section-padding hidden">
-                <div class="container">
-                    <h2>Our Core Services</h2>
-                    <div class="services-grid">
-                        <div class="service-card">
-                            <i class="fas fa-car-side service-icon"></i>
-                            <h3>Mobile Car Detailing</h3>
-                            <p>Full interior and exterior detailing, polishing, and protection—done right at your location. We bring the sparkle to your driveway or office parking spot. <strong>Pricing on Request.</strong></p>
-                            <a href="#" class="btn secondary-btn" onclick="openQuoteModal('Mobile Car Detailing')">Get a Quote</a> 
-                        </div>
-                        <div class="service-card">
-                            <i class="fas fa-home service-icon"></i>
-                            <h3>Residential Cleaning</h3>
-                            <p>Deep cleaning, routine maintenance, and specialized cleaning services for homes. Includes specific care for carpets, couches, mattresses, and more. Enjoy a pristine living space. <strong>Pricing is customized and on request.</strong></p>
-                            <a href="#" class="btn secondary-btn" onclick="openQuoteModal('Residential Cleaning')">Get a Quote</a>
-                        </div>
-                        <div class="service-card">
-                            <i class="fas fa-building service-icon"></i>
-                            <h3>Commercial Cleaning</h3>
-                            <p>Professional cleaning solutions tailored for offices, retail spaces, and commercial properties. Maintain a professional, hygienic, and inviting environment for your clients. <br><strong>Pricing is customized and on request.</strong></p>
-                            <a href="#" class="btn secondary-btn" onclick="openQuoteModal('Commercial Cleaning')">Get a Quote</a>
-                        </div>
+        <section id="services" class="section-padding hidden">
+            <div class="container">
+                <h2>Our Core Services</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-car-side service-icon"></i>
+                        <h3>Mobile Car Detailing</h3>
+                        <p>Full interior and exterior detailing, polishing, and protection—done right at your location. We bring the sparkle to your driveway or office parking spot. <strong>Pricing on Request.</strong></p>
+                        <a href="#" class="btn secondary-btn" onclick="openQuoteModal('Mobile Car Detailing')">Get a Quote</a> 
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-home service-icon"></i>
+                        <h3>Residential Cleaning</h3>
+                        <p>Deep cleaning, routine maintenance, and specialized cleaning services for homes. Includes specific care for carpets, couches, mattresses, and more. Enjoy a pristine living space. <strong>Pricing is customized and on request.</strong></p>
+                        <a href="#" class="btn secondary-btn" onclick="openQuoteModal('Residential Cleaning')">Get a Quote</a>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-building service-icon"></i>
+                        <h3>Commercial Cleaning</h3>
+                        <p>Professional cleaning solutions tailored for offices, retail spaces, and commercial properties. Maintain a professional, hygienic, and inviting environment for your clients. <br><strong>Pricing is customized and on request.</strong></p>
+                        <a href="#" class="btn secondary-btn" onclick="openQuoteModal('Commercial Cleaning')">Get a Quote</a>
                     </div>
                 </div>
-            </section>
-
-            <div id="quoteModal" class="modal">
-                <div class="modal-content">
-                    <span class="close-btn">&times;</span>
-                    <h2>Request a Quote for <span id="modalServiceName"></span></h2>
-                    <form id="quoteForm">
-                        <input type="hidden" id="serviceType" name="serviceType">
-                        
-                        <label for="userName">Your Name:</label>
-                        <input type="text" id="userName" name="userName" required>
-            
-                        <label for="userLocation">Your Location / Suburb:</label>
-                        <input type="text" id="userLocation" name="userLocation" required>
-            
-                        <label for="userPhone">WhatsApp Number:</label>
-                        <input type="tel" id="userPhone" name="userPhone" pattern="[0-9]{10,}" title="Please enter a valid phone number" required>
-            
-                        <label for="serviceDetails">Details of your request (e.g., Car model, size of house, specific items to clean):</label>
-                        <textarea id="serviceDetails" name="serviceDetails" rows="4" required></textarea>
-            
-                        <button type="submit" class="btn primary-btn full-width">Send Quote Request via WhatsApp</button>
-                        <p class="modal-note">You will be redirected to WhatsApp with a pre-filled message.</p>
-                    </form>
-                </div>
             </div>
+        </section>
+
+        <div id="quoteModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>Request a Quote for <span id="modalServiceName"></span></h2>
+                <form id="quoteForm">
+                    <input type="hidden" id="serviceType" name="serviceType">
+                    
+                    <label for="userName">Your Name:</label>
+                    <input type="text" id="userName" name="userName" required>
+        
+                    <label for="userLocation">Your Location / Suburb:</label>
+                    <input type="text" id="userLocation" name="userLocation" required>
+        
+                    <label for="userPhone">WhatsApp Number:</label>
+                    <input type="tel" id="userPhone" name="userPhone" pattern="[0-9]{10,}" title="Please enter a valid phone number" required>
+        
+                    <label for="serviceDetails">Details of your request (e.g., Car model, size of house, specific items to clean):</label>
+                    <textarea id="serviceDetails" name="serviceDetails" rows="4" required></textarea>
+        
+                    <button type="submit" class="btn primary-btn full-width">Send Quote Request via WhatsApp</button>
+                    <p class="modal-note">You will be redirected to WhatsApp with a pre-filled message.</p>
+                </form>
+            </div>
+        </div>
 
         <section id="specialized-cleaning" class="section-padding hidden">
             <div class="container">
@@ -125,6 +125,7 @@
                 </div>
             </div>
         </section>
+        
         <section id="why-us" class="section-padding bg-light hidden">
             <div class="container">
                 <h2>Why Choose mojeg?</h2>
@@ -171,6 +172,51 @@
                 </div>
             </div>
         </section>
+        
+        <section id="customer-reviews" class="section-padding bg-light hidden">
+            <div class="container">
+                <h2>What Our Customers Say</h2>
+                <div class="reviews-grid">
+                    
+                    <div class="review-card">
+                        <i class="fas fa-quote-left review-icon"></i>
+                        <p class="review-text">"Outstanding service! My car hasn't looked this good since I bought it. The convenience of having them come to my office was a game-changer. Highly recommend mojeg for mobile detailing."</p>
+                        <div class="review-author">
+                            <p><strong>— Nomusa K.</strong>, Mobile Car Detailing</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="review-card">
+                        <i class="fas fa-quote-left review-icon"></i>
+                        <p class="review-text">"They did a deep clean on my couches and carpets. The difference is incredible—they look almost brand new! The team was professional, quick, and left everything spotless. Thank you!"</p>
+                        <div class="review-author">
+                            <p><strong>— Lerato M.</strong>, Specialized Residential Cleaning</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="review-card">
+                        <i class="fas fa-quote-left review-icon"></i>
+                        <p class="review-text">"mojeg handles the weekly cleaning for our office space. They are always on time, incredibly thorough, and very reliable. It makes a huge difference to our work environment."</p>
+                        <div class="review-author">
+                            <p><strong>— David P.</strong>, Commercial Cleaning Client</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="text-center" style="margin-top: 40px;">
+                    <button id="openReviewModalBtn" class="btn primary-btn">Submit Your Review</button>
+                </div>
+            </div>
+        </section>
 
         <section id="contact" class="section-padding bg-gold-cta hidden">
             <div class="container contact-box">
@@ -185,6 +231,38 @@
                 </div>
             </div>
         </section>
+
+        <div id="reviewModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn review-close-btn">&times;</span>
+                <h2>Tell Us About Your Experience</h2>
+                <form id="reviewForm">
+                    
+                    <label for="reviewName">Your Name:</label>
+                    <input type="text" id="reviewName" name="reviewName" required>
+
+                    <label for="reviewService">Service Received:</label>
+                    <select id="reviewService" name="reviewService" required>
+                        <option value="">Select a service...</option>
+                        <option value="Mobile Car Detailing">Mobile Car Detailing</option>
+                        <option value="Residential Cleaning">Residential Cleaning</option>
+                        <option value="Commercial Cleaning">Commercial Cleaning</option>
+                        <option value="Specialized Cleaning (Upholstery/Mattress)">Specialized Cleaning</option>
+                    </select>
+
+                    <label for="reviewRating">Your Rating (5 is Best):</label>
+                    <div class="rating-input">
+                        <input type="number" id="reviewRating" name="reviewRating" min="1" max="5" required style="width: 50px;"> / 5
+                    </div>
+
+                    <label for="reviewText">Your Review/Comments:</label>
+                    <textarea id="reviewText" name="reviewText" rows="5" required></textarea>
+
+                    <button type="submit" class="btn primary-btn full-width">Send Review via Email</button>
+                    <p class="modal-note">Your review will be sent to us via email for publishing consideration.</p>
+                </form>
+            </div>
+        </div>
     </main>
 
     <footer>
@@ -206,8 +284,6 @@
                 <div class="footer-info social-links">
                     <h4>Follow Us</h4>
                     <div class="social-icons">
-                        <!-- <a href="#" target="_blank" aria-label="Follow us on Facebook"><i class="fab fa-facebook-f"></i></a> -->
-                        <!-- <a href="#" target="_blank" aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a> -->
                         <a href="https://www.tiktok.com/@mojeg_mobile_cleaning" target="_blank" aria-label="Follow us on TikTok"><i class="fab fa-tiktok"></i></a> 
                     </div>
                 </div>
